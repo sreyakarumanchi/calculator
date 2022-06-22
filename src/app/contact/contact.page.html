@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contact :P</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let person of people">
+    <button shape = "round" (click)="onClick(person)">
+      <ion-icon size = large name="person-circle-outline"></ion-icon>
+    <div>
+     name: {{person.name}}
+    </div>
+    <br>
+    <div> 
+      phone number: {{person.phoneNumber}}
+    </div>
+    <br>
+    <div>
+      email: {{person.email}}
+    </div>
+    </button>
+  </ion-card>
+  
+  <span *ngIf="selected"> 
+    {{this.selected.funFact}}
+  </span>
+</ion-content>
